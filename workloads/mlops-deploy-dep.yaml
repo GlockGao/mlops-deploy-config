@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -19,8 +20,8 @@ spec:
         app.kubernetes.io/name: app-mlflow-boston-housing
     spec:
       containers:
-        - image: 928808346782.dkr.ecr.us-west-2.amazonaws.com/yugaozh-mlops-stage-mlflow-boston-housing:latest
-          imagePullPolicy: Always
-          name: app-mlflow-boston-housing
-          ports:
-            - containerPort: 8080
+      - image: 928808346782.dkr.ecr.us-west-2.amazonaws.com/yugaozh-mlops-stage-mlflow-boston-housing:89b3b390
+        imagePullPolicy: Always
+        name: app-mlflow-boston-housing
+        ports:
+        - containerPort: 8080
