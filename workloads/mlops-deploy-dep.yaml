@@ -6,7 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/name: app-mlflow-boston-housing
   annotations:
-    # Container Image Automated Updates
+    # Container Image Automated Update
     flux.weave.works/automated: "true"
 spec:
   selector:
