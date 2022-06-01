@@ -20,7 +20,7 @@ spec:
         app.kubernetes.io/name: app-mlflow-boston-housing
     spec:
       containers:
-      - image: 928808346782.dkr.ecr.us-west-2.amazonaws.com/yugaozh-mlops-stage-mlflow-boston-housing:88f1e9fd
+      - image: 928808346782.dkr.ecr.us-west-2.amazonaws.com/yugaozh-mlops-stage-mlflow-boston-housing:be269224
         imagePullPolicy: Always
         name: app-mlflow-boston-housing
         ports:
