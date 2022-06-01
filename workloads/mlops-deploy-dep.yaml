@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: mlflow
+  name: deployment-mlflow-boston-housing
+  labels:
+    app.kubernetes.io/name: app-mlflow-boston-housing
+  annotations:
+    # Container Image Automated Updates
+    flux.weave.works/automated: "true"
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: app-mlflow-boston-housing
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: app-mlflow-boston-housing
+    spec:
+      containers:
+        - image: 928808346782.dkr.ecr.us-east-2.amazonaws.com/mlflow-eks-build:ac03b126
+          imagePullPolicy: Always
+          name: app-mlflow-boston-housing
+          ports:
+            - containerPort: 8080
